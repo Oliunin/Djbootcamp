@@ -1,0 +1,2 @@
+INSERT INTO AppTwo_company SELECT PK, comp_name, comp_house_count FROM Company
+INSERT INTO AppTwo_house SELECT PK, House_addr,geo_lat, geo_lon,Comp_id FROM House where geo_lat>0

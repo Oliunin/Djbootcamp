@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Тут будет карта</h1>
+    <div class="Ctable">
+      {% if houselist %}
+        {%for house in houselist%}
+        <select>
+          <option>{{house.comp_id}}</option>
+        </select>
+            <ol>
+              <li>{{house.house_addr}}</li>
+            </ol>
+          {%endfor%}
+      {%else%}
+      <p>No companies found</p>
+      {%endif%}
+      <!-- {% if complist %}
+        {%for comp in complist%}
+        <select>
+          <option>{{comp.comp_name}}</option>
+        </select>
+            {%for h in houselist%}
+            <ol>
+              <li>{{h.house_addr}}</li>
+            </ol>
+            {%endfor%}
+        {%endfor%}
+      {%else%}
+      <p>No companies found</p>
+      {%endif%} -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+td {width: 200px;
+      height: 200px;
+      position: relative;
+      border: 1px solid black}
+
+table {width: 600px;
+      height: 600px;
+      border: 1px solid black;}

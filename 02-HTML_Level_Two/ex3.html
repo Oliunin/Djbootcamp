@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ex3</title>
+  </head>
+  <body>
+    <h1>Course sign up page</h1>
+    <form action="thankupage.html">
+      <div>
+      <p>Please note: first name, last name, password and email are required<p>
+      <label for="firstname">First name:</label>
+      <input id="firstname" type="text" name="firstname"placeholder="first name" value="" required>
+      <label for="lastname">Last name:</label>
+      <input id="lastname" type="text" name="lastname" plaseholder="last name" value="" required>
+      </div>
+      <div>
+      <label for="useremail">Email:</label>
+      <input id="useremail" type="text" name="useremail" placeholder="name@email.com" value="" required>
+      <label for="userpas">Password</label>
+      <input id="userpas" type="password" name="userpas" value="" required>
+      </div>
+      <div>
+      <p>Are you over the age of 18?</p>
+      <label for="underage">NO</label>
+      <input id="underage" type="radio" name="userage" value="under18">
+      <label for="overage">YES</label>
+      <input id="overage" type="radio" name="userage" value="over18">
+      </div>
+      <p>Do you have a credit card or paypal?</p>
+      <select name="paymethod">
+        <option value="1">Credit card</option>
+        <option value="2">Paypal</option>
+      </select>
+      <input type="submit" name="submit" value="submit">
+    </form>
+  </body>
+</html>

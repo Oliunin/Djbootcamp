@@ -1,0 +1,9 @@
+body {background-color: black; color: white; font-family: 'Indie Flower', cursive;
+text-align: center; border-left: 100px solid grey;border-right: 100px solid grey;
+border-bottom: 50px solid grey;}
+
+p {font-size: 1.5em; padding: 50px;}
+
+label {font-size: 1.5em }
+
+#but {padding: 30px; font-family: 'Indie Flower'; font-size: 1.5em; background-color: yellow;}

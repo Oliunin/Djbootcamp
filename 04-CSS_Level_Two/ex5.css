@@ -1,0 +1,10 @@
+h1 {text-align: center; font-family: 'Mansalva', cursive; 40px
+}
+
+#table {width: 75%; margin-left:auto;
+    margin-right:auto; border-collapse: collapse; text-color: white}
+#one {width: 20%; background-color: #F5F5DC; padding-bottom: 400px; border: 20px solid white}
+#two {width: 20%; background-color: #DEB887;padding-bottom: 400px; border: 20px solid white}
+#three {width: 20%; background-color: #B8860B;padding-bottom: 400px; border: 20px solid white}
+#four {width: 20; background-color: #483D8B;padding-bottom: 400px; border: 20px solid white}
+#five {width: 20%; background-color: #ADFF2F;padding-bottom: 400px; border: 20px solid white}
