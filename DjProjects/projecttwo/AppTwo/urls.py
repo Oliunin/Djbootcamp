@@ -5,5 +5,5 @@ urlpatterns = [
     path('', views.NewUser),
     path('help', views.help),
     path('users/',views.users),
-    path('map/',views.Houselist),
+    path('map/',views.Complist),
 ]

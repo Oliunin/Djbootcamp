@@ -19,11 +19,11 @@ def users(request):
     users_dict = {'userslist':userslist}
     return render(request,'AppTwo/users.html',context=users_dict)
 
-# def Comp(request):
-#     complist = Company.objects.order_by('comp_house_count')
-#     # comp_dict = {complist:houselist}
-#     content={"complist":complist,}
-#     return render(request,'Apptwo/map.html',content)
+def Complist(request):
+     complist = Company.objects.order_by('comp_house_count')
+     # comp_dict = {complist:houselist}
+     content={"complist":complist,}
+     return render(request,'Apptwo/map.html',content)
 
 def Houselist(request):
     houselist = House.objects.order_by('comp_id')

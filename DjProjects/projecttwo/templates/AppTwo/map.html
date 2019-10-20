@@ -6,7 +6,10 @@
   </head>
   <body>
     <h1>Тут будет карта</h1>
-    <div class="Ctable">
+    <div class="">
+
+
+    <!-- <div class="Ctable">
       {% if houselist %}
         {%for house in houselist%}
         <select>
@@ -18,21 +21,16 @@
           {%endfor%}
       {%else%}
       <p>No companies found</p>
-      {%endif%}
-      <!-- {% if complist %}
-        {%for comp in complist%}
-        <select>
-          <option>{{comp.comp_name}}</option>
-        </select>
-            {%for h in houselist%}
-            <ol>
-              <li>{{h.house_addr}}</li>
-            </ol>
-            {%endfor%}
-        {%endfor%}
+      {%endif%} -->
+      {% if complist %}
+      <select class="" name="">
+          {%for comp in complist%}
+          <option value="{{ choice }}">{{comp.comp_name}}</option>
+      </select>
+          {% endfor %}
       {%else%}
       <p>No companies found</p>
-      {%endif%} -->
+      {%endif%}
     </div>
   </body>
 </html>
