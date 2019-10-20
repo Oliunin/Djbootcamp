@@ -2,14 +2,63 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Карта управляющих компаний</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=64e8366a-2cbb-40bd-87e2-85c9fe3d9b0f&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(function(){
+            // Указывается идентификатор HTML-элемента.
+            var chel_map = new ymaps.Map("chel_map", {
+                center: [55.15402, 61.42915],
+                zoom: 10
+                  });
+            var coords = [
+                            [55.1831305, 61.4191803],
+                            [55.1818883, 61.3786661],
+                            [55.1850118, 61.4197313]
+                            ];
+            var myCollection = new ymaps.GeoObjectCollection({}, {
+                  preset: 'islands#redIcon', //все метки красные
+                  draggable: false // и их можно перемещать
+                });
+            for (var i = 0; i < coords.length; i++)
+                {myCollection.add(new ymaps.Placemark(coords[i], {
+    iconLayout: 'default#image',
+    iconImageClipRect: [[0,0], [26, 46]],
+    iconImageHref: 'images/sprite.png',
+    iconImageSize: [15, 27],
+    iconImageOffset: [-15, -27]
+}));}
+
+            chel_map.geoObjects.add(myCollection);
+            });
+
+  </script>
+
   </head>
   <body>
     <h1>Тут будет карта</h1>
-    <div class="">
-
-
-    <!-- <div class="Ctable">
+    <div id="chel_map" style="width:50%; height:500px">
+    </div>
+    <div class="container">
+      {% if complist %}
+          {%for comp in complist%}
+      <table style="border:1px solid black">
+        <thead>
+          <th>№</th>
+          <th>название</th>
+          <th>количество домов</th>
+        </thead>
+        <tr>
+          <td>№</td>
+          <td>{{comp.comp_name}}</td>
+          <td>{{comp.comp_house_count}}</td>
+        </tr>
+      </table>
+          {% endfor %}
+      {%else%}
+      <p>No companies found</p>
+      {%endif%}
+      <!-- <div class="Ctable">
       {% if houselist %}
         {%for house in houselist%}
         <select>
@@ -22,15 +71,7 @@
       {%else%}
       <p>No companies found</p>
       {%endif%} -->
-      {% if complist %}
-      <select class="" name="">
-          {%for comp in complist%}
-          <option value="{{ choice }}">{{comp.comp_name}}</option>
-      </select>
-          {% endfor %}
-      {%else%}
-      <p>No companies found</p>
-      {%endif%}
+
     </div>
   </body>
 </html>

@@ -20,15 +20,16 @@ def users(request):
     return render(request,'AppTwo/users.html',context=users_dict)
 
 def Complist(request):
-     complist = Company.objects.order_by('comp_house_count')
-     # comp_dict = {complist:houselist}
+     complist = Company.objects.order_by('-comp_house_count')[:10]
+     # houselist = House.objects.filter(comp_id=)
      content={"complist":complist,}
      return render(request,'Apptwo/map.html',content)
 
-def Houselist(request):
-    houselist = House.objects.order_by('comp_id')
-    content={"houselist":houselist}
-    return render(request,'AppTwo/map.html',content)
+
+# def Houseview(request,pk):
+#     Houselist = House.objects.filter(comp_id=pk)
+#     content={"houselist":houselist}
+#     return render(request,'AppTwo/map.html',content)
 
 def NewUser(request):
     form = NewUserForm()
